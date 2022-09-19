@@ -1,7 +1,11 @@
-import video from "../data/video.js";
+import data from "../data/video.js";
+import Header from "./Header.js";
+import Likes from "./Likes.js";
+import CommentToggle from "./CommentToggle.js";
+
 
 function App() {
-  console.log("Here's your data:", video);
+  console.log("Here's your data:", data);
 
   return (
     <div className="App">
@@ -13,6 +17,9 @@ function App() {
         allowFullScreen
         title="Thinking in React"
       />
+      <Header data={data}/>
+      <Likes data={data}/>
+      <CommentToggle data={data}/>
     </div>
   );
 }
